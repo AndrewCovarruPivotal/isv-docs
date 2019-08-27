@@ -400,6 +400,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#issue-how-do-i-run-a-command-on-every-vm-in-my-cluster" title="Issue: How do I run a command on every VM in my cluster?" class="md-nav__link">
+    Issue: How do I run a command on every VM in my cluster?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#issue-my-drain-script-is-failing-how-do-i-recover" title="Issue: My drain script is failing how do I recover?" class="md-nav__link">
     Issue: My drain script is failing how do I recover?
   </a>
@@ -757,6 +764,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#issue-how-do-i-run-a-command-on-every-vm-in-my-cluster" title="Issue: How do I run a command on every VM in my cluster?" class="md-nav__link">
+    Issue: How do I run a command on every VM in my cluster?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#issue-my-drain-script-is-failing-how-do-i-recover" title="Issue: My drain script is failing how do I recover?" class="md-nav__link">
     Issue: My drain script is failing how do I recover?
   </a>
@@ -860,6 +874,13 @@ add:</p>
 </code></pre>
 
 <p>Redeploy, then you will now be able to ssh into the VM with <code>bosh ssh</code>.</p>
+<h3 id="issue-how-do-i-run-a-command-on-every-vm-in-my-cluster">Issue: How do I run a command on every VM in my cluster?<a class="headerlink" href="#issue-how-do-i-run-a-command-on-every-vm-in-my-cluster" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The following command will run on all vms:
+<code>bosh -e &lt;env name&gt; -d &lt;deployment name&gt; ssh -c "command"</code>
+If one needs to run as root:
+<code>bosh -e &lt;env-name&gt; -d &lt;deployment-name&gt; ssh -c "sudo sh -c 'command'"</code></li>
+</ul>
 <h3 id="issue-my-drain-script-is-failing-how-do-i-recover">Issue: My drain script is failing how do I recover?<a class="headerlink" href="#issue-my-drain-script-is-failing-how-do-i-recover" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Error: <code>Error: Action Failed get_task: Task &lt;task-uuid&gt; result: 1 of 1 drain scripts failed. Failed Jobs: &lt;job-name&gt;.</code>
