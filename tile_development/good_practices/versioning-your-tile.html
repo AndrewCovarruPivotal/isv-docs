@@ -13,6 +13,8 @@
         <meta name="description" content="Documentation related to Pivotal ISV Partners.">
       
       
+        <link rel="canonical" href="https://cf-platform-eng.github.io/isv-docs/tile_development/good_practices/versioning-your-tile.html">
+      
       
         <meta name="author" content="Platform Engineering">
       
@@ -35,18 +37,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="/isv-docs/assets/images/pivotal_favicon.ico">
+      <link rel="shortcut icon" href="../../assets/images/pivotal_favicon.ico">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
     
     
       
-        <title>ISV Docs</title>
+        <title>Versioning Your Tile - ISV Docs</title>
       
     
     
-      <link rel="stylesheet" href="/isv-docs/assets/stylesheets/application.0284f74d.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
       
-        <link rel="stylesheet" href="/isv-docs/assets/stylesheets/application-palette.01803549.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
       
       
         
@@ -55,7 +57,7 @@
       
     
     
-      <script src="/isv-docs/assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -64,10 +66,10 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="/isv-docs/assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
-      <link rel="stylesheet" href="/isv-docs/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     
       
@@ -90,6 +92,10 @@
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#versioning-your-tile" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
     
     
       <header class="md-header" data-md-component="header">
@@ -155,14 +161,16 @@
       
         
 
-<nav class="md-tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="/isv-docs/index.html" title="Overview" class="md-tabs__link md-tabs__link--active">
+      <a href="../../index.html" title="Overview" class="md-tabs__link">
         Overview
       </a>
     
@@ -178,7 +186,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/isv-docs/tile_development/common_issues_helps/bosh_faq.html" title="Tile Development" class="md-tabs__link">
+        <a href="../common_issues_helps/bosh_faq.html" title="Tile Development" class="md-tabs__link">
           Tile Development
         </a>
       
@@ -193,7 +201,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/isv-docs/releases/pks1_5.html" title="Releases" class="md-tabs__link">
+        <a href="../../releases/pks1_5.html" title="Releases" class="md-tabs__link">
           Releases
         </a>
       
@@ -254,7 +262,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/isv-docs/index.html" title="Overview" class="md-nav__link">
+    <a href="../../index.html" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -264,10 +272,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Tile Development
@@ -304,7 +314,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/isv-docs/tile_development/common_issues_helps/bosh_faq.html" title="BOSH FAQ" class="md-nav__link">
+    <a href="../common_issues_helps/bosh_faq.html" title="BOSH FAQ" class="md-nav__link">
       BOSH FAQ
     </a>
   </li>
@@ -316,7 +326,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/isv-docs/tile_development/common_issues_helps/tile_development_faq.html" title="Tile Development FAQ" class="md-nav__link">
+    <a href="../common_issues_helps/tile_development_faq.html" title="Tile Development FAQ" class="md-nav__link">
       Tile Development FAQ
     </a>
   </li>
@@ -331,10 +341,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" checked>
     
     <label class="md-nav__link" for="nav-2-2">
       Good Practices / Features
@@ -352,7 +364,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/isv-docs/tile_development/good_practices/bbr.html" title="BOSH Backup and Restore (BBR)" class="md-nav__link">
+    <a href="bbr.html" title="BOSH Backup and Restore (BBR)" class="md-nav__link">
       BOSH Backup and Restore (BBR)
     </a>
   </li>
@@ -364,7 +376,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/isv-docs/tile_development/good_practices/opsmanager_syslog.html" title="Ops Manager Syslog Form" class="md-nav__link">
+    <a href="opsmanager_syslog.html" title="Ops Manager Syslog Form" class="md-nav__link">
       Ops Manager Syslog Form
     </a>
   </li>
@@ -376,7 +388,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/isv-docs/tile_development/good_practices/secure-bindings-odb.html" title="Secure Bindings in On-Demand Broker" class="md-nav__link">
+    <a href="secure-bindings-odb.html" title="Secure Bindings in On-Demand Broker" class="md-nav__link">
       Secure Bindings in On-Demand Broker
     </a>
   </li>
@@ -386,11 +398,77 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="/isv-docs/tile_development/good_practices/versioning-your-tile.html" title="Versioning Your Tile" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Versioning Your Tile
+      </label>
+    
+    <a href="versioning-your-tile.html" title="Versioning Your Tile" class="md-nav__link md-nav__link--active">
       Versioning Your Tile
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#follow-semantic-versioning" title="Follow Semantic Versioning" class="md-nav__link">
+    Follow Semantic Versioning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ops-manager-version-restrictions" title="Ops Manager Version Restrictions" class="md-nav__link">
+    Ops Manager Version Restrictions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#give-each-build-a-unique-version" title="Give Each Build a Unique Version" class="md-nav__link">
+    Give Each Build a Unique Version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-together" title="Putting It Together" class="md-nav__link">
+    Putting It Together
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -424,7 +502,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/isv-docs/tile_development/how_tos/pas_for_windows.html" title="PAS for Windows" class="md-nav__link">
+    <a href="../how_tos/pas_for_windows.html" title="PAS for Windows" class="md-nav__link">
       PAS for Windows
     </a>
   </li>
@@ -436,7 +514,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/isv-docs/tile_development/how_tos/tcp_routing.html" title="TCP Routing" class="md-nav__link">
+    <a href="../how_tos/tcp_routing.html" title="TCP Routing" class="md-nav__link">
       TCP Routing
     </a>
   </li>
@@ -448,7 +526,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/isv-docs/tile_development/how_tos/uaa.html" title="UAA" class="md-nav__link">
+    <a href="../how_tos/uaa.html" title="UAA" class="md-nav__link">
       UAA
     </a>
   </li>
@@ -489,7 +567,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/isv-docs/releases/pks1_5.html" title="PKS 1.5" class="md-nav__link">
+    <a href="../../releases/pks1_5.html" title="PKS 1.5" class="md-nav__link">
       PKS 1.5
     </a>
   </li>
@@ -501,7 +579,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/isv-docs/releases/pcf2_7.html" title="PCF 2.7" class="md-nav__link">
+    <a href="../../releases/pcf2_7.html" title="PCF 2.7" class="md-nav__link">
       PCF 2.7
     </a>
   </li>
@@ -513,7 +591,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/isv-docs/releases/pcf2_6.html" title="PCF 2.6 / PKS 1.5" class="md-nav__link">
+    <a href="../../releases/pcf2_6.html" title="PCF 2.6 / PKS 1.5" class="md-nav__link">
       PCF 2.6 / PKS 1.5
     </a>
   </li>
@@ -525,7 +603,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/isv-docs/releases/pcf2_5.html" title="PCF 2.5 / PKS 1.4" class="md-nav__link">
+    <a href="../../releases/pcf2_5.html" title="PCF 2.5 / PKS 1.4" class="md-nav__link">
       PCF 2.5 / PKS 1.4
     </a>
   </li>
@@ -537,7 +615,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/isv-docs/releases/pcf2_4.html" title="PCF 2.4 / PKS 1.3" class="md-nav__link">
+    <a href="../../releases/pcf2_4.html" title="PCF 2.4 / PKS 1.3" class="md-nav__link">
       PCF 2.4 / PKS 1.3
     </a>
   </li>
@@ -554,7 +632,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/isv-docs/pie_environments.html" title="Pivotal Integration Environments (PIE)" class="md-nav__link">
+    <a href="../../pie_environments.html" title="Pivotal Integration Environments (PIE)" class="md-nav__link">
       Pivotal Integration Environments (PIE)
     </a>
   </li>
@@ -566,7 +644,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/isv-docs/about.html" title="About" class="md-nav__link">
+    <a href="../../about.html" title="About" class="md-nav__link">
       About
     </a>
   </li>
@@ -579,12 +657,102 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#follow-semantic-versioning" title="Follow Semantic Versioning" class="md-nav__link">
+    Follow Semantic Versioning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ops-manager-version-restrictions" title="Ops Manager Version Restrictions" class="md-nav__link">
+    Ops Manager Version Restrictions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#give-each-build-a-unique-version" title="Give Each Build a Unique Version" class="md-nav__link">
+    Give Each Build a Unique Version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-together" title="Putting It Together" class="md-nav__link">
+    Putting It Together
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
-
+                
+                  <a href="https://github.com/cf-platform-eng/isv-docs/edit/master/content/tile_development/good_practices/versioning-your-tile.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="versioning-your-tile">Versioning Your Tile<a class="headerlink" href="#versioning-your-tile" title="Permanent link">&para;</a></h1>
+<p>This topic describes our recommendations for versioning your tile.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>In an ideal world, all tiles could all be independently versioned, per <a href="https://semver.org/">Semantic Versioning</a>, and we could call it a day.
+However, there are other influences to tile version numbers.
+Your marketing department could require your tile version to reflect align with your core product version.
+Ops Manager has a more stringent version structure than full Semantic Versioning.
+Here we describe the best practices for versioning your tile.</p>
+<h2 id="follow-semantic-versioning">Follow Semantic Versioning<a class="headerlink" href="#follow-semantic-versioning" title="Permanent link">&para;</a></h2>
+<p><a href="https://semver.org/">Semantic Versioning</a> is the place to start.</p>
+<h2 id="ops-manager-version-restrictions">Ops Manager Version Restrictions<a class="headerlink" href="#ops-manager-version-restrictions" title="Permanent link">&para;</a></h2>
+<p>Ops Manager supports <a href="https://github.com/rubygems/rubygems/blob/ed6641c2f36268a89c6db150fca5768e225cf804/lib/rubygems/version.rb#L158">versions per the Ruby <code>Gem::Version</code> module</a>.
+This basically boils down to something of the form <code>1.2.3</code> or <code>1.2.3-alpha.123</code>, or <code>1.2.3-foobar</code>.
+This is a subset of Semantic Versioning, most notably lacking the <code>+&lt;build-number&gt;</code> syntax.</p>
+<h2 id="give-each-build-a-unique-version">Give Each Build a Unique Version<a class="headerlink" href="#give-each-build-a-unique-version" title="Permanent link">&para;</a></h2>
+<p>Even without the Semantic Versioning build specifier syntax, it is possible to give each build a unique version number.
+Doing so will help you, and help our team help you, in reproducing behavior while debugging your tile.
+Iterating on a build using the same version is an easy way to cause confusion and waste time debugging the wrong bits.</p>
+<h2 id="putting-it-together">Putting It Together<a class="headerlink" href="#putting-it-together" title="Permanent link">&para;</a></h2>
+<p>A few patterns we have seen used successfully:</p>
+<ul>
+<li><strong>Increment patch</strong>: <code>1.2.3</code> (the third build on the 1.2 release cycle).</li>
+<li><strong>Increment build number</strong>: <code>1.2.3-build.42</code> (the 42nd build of the 1.2.3 release cycle).</li>
+<li><strong>Include a timestamp</strong>: <code>1.2.3-build.20191021.1245.24</code> (build was performed on October 21, 2019, at 12:45:24pm).</li>
+</ul>
+                
+                  
+                
+              
               
                 
 
@@ -623,9 +791,9 @@
       
     </div>
     
-      <script src="/isv-docs/assets/javascripts/application.245445c6.js"></script>
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"/isv-docs/"}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>

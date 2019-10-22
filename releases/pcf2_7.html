@@ -390,6 +390,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tile_development/good_practices/versioning-your-tile.html" title="Versioning Your Tile" class="md-nav__link">
+      Versioning Your Tile
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -532,6 +544,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tile-ci-configuration" title="Tile CI Configuration" class="md-nav__link">
+    Tile CI Configuration
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#new-ga-features" title="New GA Features" class="md-nav__link">
@@ -718,6 +737,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#tile-ci-configuration" title="Tile CI Configuration" class="md-nav__link">
+    Tile CI Configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#new-ga-features" title="New GA Features" class="md-nav__link">
     New GA Features
   </a>
@@ -824,6 +850,16 @@
 <p>With this release, we have a handful of changes that require attention from tile authors.  See the complete list of breaking changes in the <a href="https://docs.pivotal.io/platform/2-7/pcf-release-notes/breaking-changes.html">release notes</a></p>
 <p>PCF 2.4 release will move to End of General Support (EOGS) once PCF 2.7 is released.</p>
 <h2 id="pcf-27-changes">PCF 2.7 Changes<a class="headerlink" href="#pcf-27-changes" title="Permanent link">&para;</a></h2>
+<h3 id="tile-ci-configuration">Tile CI Configuration<a class="headerlink" href="#tile-ci-configuration" title="Permanent link">&para;</a></h3>
+<p>Some changes to Ops Manager 2.7 have impacted the tile configuration in our Tile CI system.
+Ops Manager has gotten more picky about the configuration it accepts.
+Here are two particular cases that have caused trouble:</p>
+<ul>
+<li>Ops Manager will reject the configuration if it includes properties underneath unselected options of a selector type property.</li>
+<li>Ops Manager will reject the configuration if it includes properties that have specified <code>configurable: false</code>.</li>
+</ul>
+<p>Tile CI will give you a list of offending properties when it tries to configure your tile.
+To fix the problem, navigate to the "Advanced" configuration tab for your tile, and simply remove the offending properties from the tile configuration.</p>
 <h3 id="new-ga-features">New GA Features<a class="headerlink" href="#new-ga-features" title="Permanent link">&para;</a></h3>
 <h4 id="ops-manager">Ops Manager<a class="headerlink" href="#ops-manager" title="Permanent link">&para;</a></h4>
 <ul>
