@@ -702,9 +702,12 @@ and we strongly advise against using these environments for customer demos and o
 </div>
 <h2 id="pivotal-container-service-pks">Pivotal Container Service (PKS)<a class="headerlink" href="#pivotal-container-service-pks" title="Permanent link">&para;</a></h2>
 <p>To develop an integration with PKS, Pivotal can provide you with a dedicated PKS Kubernetes cluster.
-If you would like a development cluster, please fill out the
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSeM9Bopf8_PEc3CExuKn5XW-5BPvobGufbLtA6Gg7Zxn_d1rA/viewform">PKS Kubernetes Cluster request form</a>.
-Once we process your request, we will send you access information via <a href="https://pivotalpartners.slack.com/">Pivotal Partner Slack</a>.</p>
+If you would like a development cluster, please request access to the <code>PKS Clusters</code> Tab in Tile Dashboard via a message in you partner slack channel. (please note that this needs to be done after every time the PKS Environment gets replaced with a different name and you will only have access to create / remove a cluster, not to the opsmanager for this environment).</p>
+<p>After you got added you will see the tab like this:</p>
+<p><img alt="Screenshot" src="img/pksctl_manage_clusters.png" /></p>
+<p>From there you can copy the pks cli login string, view your clusters or create a new one where you can select the plans (please read their description) and adjust the worker node count (default=1).</p>
+<p><img alt="Screenshot" src="img/pksctl_create_cluster.png" /></p>
+<p>Please note that your cluster limit is 2, so you need to delete clusters if you need new ones.</p>
 <h2 id="pivotal-application-service-pas">Pivotal Application Service (PAS)<a class="headerlink" href="#pivotal-application-service-pas" title="Permanent link">&para;</a></h2>
 <p>To develop a PAS integration, Pivotal will provide you with shared access to an environment.
 To use your assigned PAS environment:</p>
