@@ -42,7 +42,7 @@
     
     
       
-        <title>PCF 2.7 - ISV Docs</title>
+        <title>Pivotal Platform 2.7 - ISV Docs</title>
       
     
     
@@ -93,7 +93,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#pcf-27" tabindex="1" class="md-skip">
+      <a href="#pivotal-platform-27" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -532,11 +532,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        PCF 2.7
+        Pivotal Platform 2.7
       </label>
     
-    <a href="pcf2_7.html" title="PCF 2.7" class="md-nav__link md-nav__link--active">
-      PCF 2.7
+    <a href="pcf2_7.html" title="Pivotal Platform 2.7" class="md-nav__link md-nav__link--active">
+      Pivotal Platform 2.7
     </a>
     
       
@@ -550,8 +550,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pcf-27-changes" title="PCF 2.7 Changes" class="md-nav__link">
-    PCF 2.7 Changes
+  <a href="#pivotal-platform-27-changes" title="Pivotal Platform 2.7 Changes" class="md-nav__link">
+    Pivotal Platform 2.7 Changes
   </a>
   
     <nav class="md-nav">
@@ -741,8 +741,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pcf-27-changes" title="PCF 2.7 Changes" class="md-nav__link">
-    PCF 2.7 Changes
+  <a href="#pivotal-platform-27-changes" title="Pivotal Platform 2.7 Changes" class="md-nav__link">
+    Pivotal Platform 2.7 Changes
   </a>
   
     <nav class="md-nav">
@@ -854,14 +854,14 @@
                   <a href="https://github.com/cf-platform-eng/isv-docs/edit/master/content/releases/pcf2_7.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="pcf-27">PCF 2.7<a class="headerlink" href="#pcf-27" title="Permanent link">&para;</a></h1>
+                <h1 id="pivotal-platform-27">Pivotal Platform 2.7<a class="headerlink" href="#pivotal-platform-27" title="Permanent link">&para;</a></h1>
 <p>Hello Pivotal Partners,</p>
 <ul>
-<li>PCF 2.7 has been released on <a href="https://network.pivotal.io/products/elastic-runtime#/releases/467372">PivNet</a></li>
+<li>Pivotal Application Service 2.7 has been released on <a href="https://network.pivotal.io/products/elastic-runtime#/releases/467372">PivNet</a></li>
 </ul>
 <p>With this release, we have a handful of changes that require attention from tile authors.  See the complete list of breaking changes in the <a href="https://docs.pivotal.io/platform/2-7/pcf-release-notes/breaking-changes.html">release notes</a></p>
-<p>PCF 2.4 release will move to End of General Support (EOGS) once PCF 2.7 is released.</p>
-<h2 id="pcf-27-changes">PCF 2.7 Changes<a class="headerlink" href="#pcf-27-changes" title="Permanent link">&para;</a></h2>
+<p>PAS 2.4 release will move to End of General Support (EOGS) once PAS 2.7 is released.</p>
+<h2 id="pivotal-platform-27-changes">Pivotal Platform 2.7 Changes<a class="headerlink" href="#pivotal-platform-27-changes" title="Permanent link">&para;</a></h2>
 <h3 id="tile-ci-configuration">Tile CI Configuration<a class="headerlink" href="#tile-ci-configuration" title="Permanent link">&para;</a></h3>
 <p>Some changes to Ops Manager 2.7 have impacted the tile configuration in our Tile CI system.
 Ops Manager has gotten more picky about the configuration it accepts.
@@ -908,16 +908,16 @@ To fix the problem, navigate to the "Advanced" configuration tab for your tile, 
 <li>Replace <code>uaa.port</code> with <code>uaa.ssl.port</code> (<strong>BREAKING CHANGE</strong>)</li>
 <li>UAA is disallowing incoming HTTP traffic from UAA to the OM, PAS, and PKS databases. UAA now only supports HTTPS and platform component teams will need to use uaa.ssl.port.</li>
 <li>Deprecating the firehose</li>
-<li>Log Cache is replacing the firehose for logs, in the PCF 2.7 timeframe, the firehose should be considered deprecated.</li>
+<li>Log Cache is replacing the firehose for logs, in the PAS 2.7 timeframe, the firehose should be considered deprecated.</li>
 <li>See the notice below for details.</li>
 <li>Remove ETCD and Consul: Final mile to remove consul from all tiles</li>
 <li>Final clean up for all teams to remove consul to remove tech debt and complexity from the platform</li>
 </ul>
 <h2 id="notice-for-partners-with-nozzles">Notice for Partners with Nozzles<a class="headerlink" href="#notice-for-partners-with-nozzles" title="Permanent link">&para;</a></h2>
-<p>The v1 nozzle endpoint is being deprecated in December. v1 nozzles will not work after this date. This change will likely arrive in PCF version 2.8, which will likely be released in December 2019.</p>
+<p>The v1 nozzle endpoint is being deprecated in December. v1 nozzles will not work after this date. This change will likely arrive in PAS version 2.8, which will likely be released in December 2019.</p>
 <p>You may already be using the v2 API, we’re communicating this broadly to ensure that no partners are missed.</p>
 <p>To help with this transition, our team has built v2 API examples in the GitHub repository <a href="https://github.com/cf-platform-eng/firehose-nozzle-v2">firehose-nozzle-v2</a>. There are two ways of connecting: the Reverse Log Proxy (RLP) and the Reverse Log Proxy Gateway (RLP Gateway). We recommend using the Gateway, as the deployment and authentication model is simpler (a BOSH release isn’t required and the nozzle can be deployed as an app when using the RLP Gateway). The above repository contains code samples for both methods, but only packages the Gateway based solution into a tile.</p>
-<p>Reverse Log Proxy Gateway support was added in PCF 2.4.  Pivotal support policies (n-2 release) should allow this support to be widespread by the September release of PCF 2.7.</p>
+<p>Reverse Log Proxy Gateway support was added in PAS 2.4.  Pivotal support policies (n-2 release) should allow this support to be widespread by the September release of PAS 2.7.</p>
 <p>The payload will be slightly different, so translation into your system of record will require code changes. The <a href="https://github.com/cloudfoundry/loggregator-api/blob/master/README.md#v2---v1-mapping">loggregator API documentation describes</a> a mapping between the v1 and v2 payload.</p>
 <p>If you’re unsure what version of the API you’re consuming, check the Golang dependencies. Using noaa and sonde-go indicates is the v1 API. The v2 API uses either go-loggregator or, for a Gateway based solution, potentially no Cloud Foundry specific libraries.</p>
 <p>The <a href="https://github.com/cloudfoundry-community/firehose-to-syslog">firehose-to-syslog project</a> is a more complex, real-world example that was migrated from v1 to v2 via <a href="https://github.com/cloudfoundry-community/firehose-to-syslog/pull/213">this pull request</a>.</p>
